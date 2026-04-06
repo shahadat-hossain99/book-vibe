@@ -10,19 +10,18 @@ import Books from "./Pages/Books/Books";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout></MainLayout>,
+    Component: MainLayout,
     children: [
       {
         index: true,
-        element: <HomePage></HomePage>,
+        Component: HomePage,
       },
       {
         path: "/books",
-        element: <Books></Books>,
+        Component: Books,
       },
     ],
   },
-  {},
 ]);
 
 createRoot(document.getElementById("root")).render(
