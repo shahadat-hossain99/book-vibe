@@ -7,7 +7,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            `font-semibold mr-1 ${isActive ? "text-green-500 border-green-500 border" : ""}`
+            `font-semibold mr-2 ${isActive ? "text-green-500 border-green-500 border" : ""}`
           }
           to={"/"}
         >
@@ -17,7 +17,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            `font-semibold mr-1 ${isActive ? "text-green-500 border-green-500 border" : ""}`
+            `font-semibold mr-2 ${isActive ? "text-green-500 border-green-500 border" : ""}`
           }
           to={"/books"}
         >
@@ -27,7 +27,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            `font-semibold mr-1 ${isActive ? "text-green-500 border-green-500 border" : ""}`
+            `font-semibold mr-2 ${isActive ? "text-green-500 border-green-500 border" : ""}`
           }
           to={"/pages-to-read"}
         >
@@ -37,8 +37,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="bg-base-100 shadow-sm sticky top-0 z-10 ">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,8 +71,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-4 text-white">
+          <button className="btn btn-success text-white">Sign In</button>
+          <button className="btn btn-info text-white">Sign Up</button>
         </div>
       </div>
     </div>
