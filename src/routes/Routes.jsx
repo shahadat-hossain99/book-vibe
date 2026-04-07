@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import Books from "../Pages/Books/Books";
 import HomePage from "../Pages/HomePage/HomePage";
 import ErrorPage from "../Pages/ErrorPages/ErrorPage";
+import BookDetails from "../Pages/BookDetails/BookDetails";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ export const router = createBrowserRouter([
       {
         path: "/books",
         Component: Books,
+      },
+      {
+        path: "/bookDetails/:bookId",
+        Component: BookDetails,
+        loader: () => fetch("/booksData.json"),
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,
