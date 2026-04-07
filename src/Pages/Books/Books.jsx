@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { BookContext } from "../../Context/BookContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -13,6 +13,8 @@ const Books = () => {
   const { storedBooks, wishlist } = bookContext;
   // console.log(bookContext, "BookContext");
 
+  const [sortingType, setSortingType] = useState("");
+
   return (
     <div className="container mx-auto">
       <h2 className="text-center text-3xl font-bold bg-gray-200 py-6 rounded-b-2xl shadow-xl mb-8">
@@ -21,17 +23,29 @@ const Books = () => {
 
       <div className="flex justify-center items-center mb-15">
         <div className="dropdown dropdown-start ">
-          <div tabIndex={0} role="button" className="btn m-1">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn m-1 btn-soft btn-success"
+          >
             Sort By <FaArrowDown />
           </div>
           <ul
             tabIndex="-1"
             className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
           >
-            <li>
+            <li
+              onClick={() => {
+                setSortingType("pages");
+              }}
+            >
               <a>Pages</a>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setSortingType("rating");
+              }}
+            >
               <a>Rating</a>
             </li>
           </ul>
@@ -53,14 +67,14 @@ const Books = () => {
           {!storedBooks || storedBooks.length === 0 ? (
             <EmptyList />
           ) : (
-            <ListedReadList />
+            <ListedReadList sortingType={sortingType} />
           )}
         </TabPanel>
         <TabPanel>
           {!wishlist || wishlist.length === 0 ? (
             <EmptyList />
           ) : (
-            <ListedWishList />
+            <ListedWishList sortingType={sortingType} />
           )}
         </TabPanel>
       </Tabs>

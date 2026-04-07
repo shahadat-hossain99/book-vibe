@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { BookContext } from "../../Context/BookContext";
 import BookCard from "../ui/BookCard";
 
-const ListedReadList = () => {
+const ListedReadList = ({ sortingType }) => {
   const bookContext = useContext(BookContext);
   const { storedBooks, wishlist } = bookContext;
   console.log(bookContext, "BookContext");
