@@ -7,9 +7,12 @@ import MainLayout from "./Layout/MainLayout";
 import HomePage from "./Pages/HomePage/HomePage";
 import Books from "./Pages/Books/Books";
 import { router } from "./routes/Routes";
+import BookProvider from "./Context/BookContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <BookProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </BookProvider>
   </StrictMode>,
 );

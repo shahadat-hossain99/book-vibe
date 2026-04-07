@@ -1,5 +1,7 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
+import { BookContext } from "../../Context/BookContext";
 
 //!Load-type-01: const booksPromise = fetch("/booksData.json").then((res) => res.json());
 
@@ -8,10 +10,10 @@ const BookDetails = () => {
   //!   console.log(books, "books");
 
   const books = useLoaderData();
-  console.log(books, "books");
+  //   console.log(books, "books");
 
   const { bookId } = useParams();
-  console.log(bookId, "bookId");
+  //   console.log(bookId, "bookId");
 
   //   const expectedBook = books.find((book) => book.bookId == bookId);
 
@@ -31,6 +33,10 @@ const BookDetails = () => {
     totalPages,
     yearOfPublishing,
   } = expectedBook;
+
+  const bookContext = useContext(BookContext);
+  const { handleMarkAsRead, storedBooks, setStoredBooks } = bookContext;
+  console.log(bookContext, "BookContext");
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto bg-base-100 shadow-lg rounded-2xl md:my-10 m-2">
@@ -81,8 +87,15 @@ const BookDetails = () => {
           </div>
 
           <div className=" space-x-2">
-            <button className="btn btn-soft btn-ghost font-bold">Read</button>
-            <button className="btn btn-info text-white">Wishlist</button>
+            <button
+              onClick={() => {
+                handleMarkAsRead(expectedBook);
+              }}
+              className="btn btn-soft btn-ghost font-bold"
+            >
+              Mark As Read
+            </button>
+            <button className="btn btn-info text-white">Add To Wishlist</button>
           </div>
         </div>
       </div>
