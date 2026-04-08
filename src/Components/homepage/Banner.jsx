@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="hero-content flex-col lg:flex-row-reverse w-full justify-between items-center">
           <img
             src={HeroImg}
-            className="max-w-[200px] md:max-w-sm rounded-lg shadow-2xl"
+            className="max-w-50 md:max-w-sm rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-5xl font-bold">
