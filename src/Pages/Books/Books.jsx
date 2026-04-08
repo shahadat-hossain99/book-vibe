@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BookContext } from "../../Context/BookContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
@@ -14,6 +14,7 @@ const Books = () => {
   // console.log(bookContext, "BookContext");
 
   const [sortingType, setSortingType] = useState("");
+  console.log(sortingType, "sortingType");
 
   return (
     <div className="container mx-auto">
@@ -28,7 +29,7 @@ const Books = () => {
             role="button"
             className="btn m-1 btn-soft btn-success"
           >
-            Sort By <FaArrowDown />
+            Sort By: {sortingType} <FaArrowDown />
           </div>
           <ul
             tabIndex="-1"
