@@ -15,9 +15,9 @@ const addReadListToLocalDB = (book) => {
   if (!isExist) {
     allBooks.push(book);
     localStorage.setItem("readList", JSON.stringify(allBooks));
-    console.log("বইটি সফলভাবে সেভ হয়েছে!");
+    console.log("book added!");
   } else {
-    console.log("বইটি সফলভাবে সেভ হয়েছে!!!!!!");
+    console.log("book didn't added!!!!!!");
   }
 };
 

@@ -1,52 +1,91 @@
-# 📚 Book Vibe - Your Personal Library Companion
+# 📚 BookVibe — Your Personal Library Companion
 
-![Project Banner](https://img.shields.io/badge/BookVibe-MERN%20Stack-blue?style=for-the-badge&logo=react)
+![BookVibe](https://img.shields.io/badge/BookVibe-React%20App-blue?style=for-the-badge&logo=react)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
 
-**Book Vibe** একটি আধুনিক এবং রেসপনসিভ ওয়েব অ্যাপ্লিকেশন যা পাঠকদের তাদের পছন্দের বই খুঁজে পেতে, বিস্তারিত জানতে এবং একটি ব্যক্তিগত উইশলিস্ট বা রিডিং লিস্ট মেইনটেইন করতে সাহায্য করে। এটি মূলত ইউজার এক্সপেরিয়েন্স এবং ক্লিন ইউআই-এর ওপর ভিত্তি করে তৈরি।
+**BookVibe** is a modern, responsive web application that helps readers discover books, explore detailed information, and maintain a personal wishlist or reading list — built with a focus on clean UI and smooth user experience.
 
----
-
-## 🚀 Live Demo
-
-🔗 [Live Link ক্লিক করুন](এখানে_আপনার_লাইভ_লিঙ্ক_দিন)  
-_(যেমন: https://book-vibe-shahadat.netlify.app/)_
+🔗 **[View Live Site](https://book-vibe-platform.netlify.app)** &nbsp;|&nbsp; 💻 **[Source Code](https://github.com/shahadat-hossain99/book-vibe)**
 
 ---
 
 ## ✨ Features
 
-- **Dynamic Book Listing:** সব বইয়ের তালিকা একসাথে দেখার সুবিধা।
-- **Detailed View:** প্রতিটি বইয়ের লেখক, ক্যাটাগরি, রিভিউ এবং রেটিং বিস্তারিতভাবে দেখা যায়।
-- **Tab-based Navigation:** "Read Books" এবং "Wishlist Books" আলাদা ট্যাবে দেখার জন্য DaisyUI-এর মডার্ন ট্যাব সিস্টেম।
-- **Sorting Logic:** রেটিং, পেজ সংখ্যা বা প্রকাশের বছরের ওপর ভিত্তি করে বইগুলো সর্ট (Sorting) করার সুবিধা।
-- **Responsive Design:** মোবাইল, ট্যাবলেট এবং ডেস্কটপ সব ডিভাইসের জন্য পুরোপুরি অপ্টিমাইজড।
-- **Interactive UI:** ডটেড ডিভাইডার, কাস্টম এরর পেজ এবং চমৎকার হোভার ইফেক্ট।
+| Feature              | Description                                                              |
+| -------------------- | ------------------------------------------------------------------------ |
+| Dynamic Book Listing | Browse all books in one place with a clean, organized layout             |
+| Detailed Book View   | See each book's author, category, reviews and ratings in full detail     |
+| Tab-based Navigation | Switch between Read Books and Wishlist using a modern DaisyUI tab system |
+| Smart Sorting        | Sort books by rating, page count, or publication year instantly          |
+| Fully Responsive     | Optimized for mobile, tablet, and desktop devices                        |
+| Interactive UI       | Custom error pages, dotted dividers, and smooth hover effects            |
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
+**Frontend:** `React.js` `React Router DOM` `Tailwind CSS` `DaisyUI` `React Icons`
 
-- **React.js** (Functional Components, Hooks)
-- **React Router Dom** (Navigation)
-- **Tailwind CSS** (Styling)
-- **DaisyUI** (UI Components)
-- **React Icons** (FontAwesome/Lucide)
-
-**State Management & Data:**
-
-- **Local Storage** (বইয়ের লিস্ট পারসিস্ট করার জন্য)
-- **JSON Data** (বইয়ের তথ্যের জন্য)
+**Data & Storage:** `Local Storage` `JSON`
 
 ---
 
 ## 📦 Installation & Setup
 
-আপনার লোকাল মেশিনে প্রজেক্টটি রান করতে নিচের ধাপগুলো অনুসরণ করুন:
+```bash
+# 1. Clone the repository
+git clone https://github.com/shahadat-hossain99/book-vibe.git
 
-1. **Repository ক্লোন করুন:**
-   ```bash
-   git clone [https://github.com/shahadat-hossain99/book-vibe.git](https://github.com/shahadat-hossain99/book-vibe.git)
-   ```
+# 2. Navigate into the project
+cd book-vibe
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+
+# 5. Open in browser → http://localhost:5173
+```
+
+---
+
+## 📁 Project Structure
+
+book-vibe/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── data/
+│ └── main.jsx
+├── index.html
+├── tailwind.config.js
+└── package.json
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your branch: `git checkout -b feature/your-feature`
+3. Commit changes: `git commit -m 'Add your feature'`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+**Made with ❤️ by [Md. Shahadat Hossain](https://github.com/shahadat-hossain99)**
+
+- GitHub: [@shahadat-hossain99](https://github.com/shahadat-hossain99)
+- LinkedIn: [md-shahadat-hossain-coder](https://www.linkedin.com/in/md-shahadat-hossain-coder)
+
+<p align="center">⭐ If you found this helpful, please give it a star!</p>
